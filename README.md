@@ -23,8 +23,8 @@ O - means order of magntude of complexity
 O(n)
 
 ## Complexities 
-Linear search is O(n) - linear time 
-Binary search is O(log n) - Logarithmic time 
+* Linear search is O(n) - linear time 
+* Binary search is O(log n) - Logarithmic time 
 
 ### Quadratic time 
 Loop in a loop is O(n^2)  
