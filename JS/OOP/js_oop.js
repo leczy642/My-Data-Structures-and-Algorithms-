@@ -33,3 +33,4 @@ Person.prototype.salute = function (){
 
 person1 = new Person('John', 25);
 console.log(person1.salute());
+
