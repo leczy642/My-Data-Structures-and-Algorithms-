@@ -27,8 +27,16 @@ class Node :
 
 class Linkedlist:
     """
+    Singly Linked List 
+    Linear data structure that stores values in nodes. The list maintains a reference to the first node, also called head. 
+    Each node points to the next node in the list
+
+    Attributes:
+        head: The head node of the list
+  
     in the constructor we initialize the head as none,
     in other words we are creating/initializing an empty list
+    
     """
     #head = None
 
