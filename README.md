@@ -26,6 +26,10 @@ O(n)
 * Linear search is O(n) - linear time 
 * Binary search is O(log n) - Logarithmic time 
 
+### Constant time
+eg insertion and deletion 
+O(1)
+
 ### Quadratic time 
 Loop in a loop is O(n^2)  
 
