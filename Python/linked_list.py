@@ -23,20 +23,17 @@ class Node :
 
     """
     Singly Linked List 
-    """
-
-class Linkedlist:
-    """
-    Singly Linked List 
     Linear data structure that stores values in nodes. The list maintains a reference to the first node, also called head. 
     Each node points to the next node in the list
 
     Attributes:
         head: The head node of the list
-  
+    """
+
+class Linkedlist:
+    """
     in the constructor we initialize the head as none,
     in other words we are creating/initializing an empty list
-    
     """
     #head = None
 
@@ -158,6 +155,23 @@ class Linkedlist:
                 previous = current
                 current = current.next_node
 
+    def node_at_index(self, index):
+        """
+        Returns the Node at specified index
+        Takes O(n) time
+        """
+
+        if index == 0:
+            return self.head
+
+        current = self.head
+        position = 0
+
+        while position < index:
+            current = current.next_node
+            position += 1
+
+        return current
 
     def __repr__(self):
         """
