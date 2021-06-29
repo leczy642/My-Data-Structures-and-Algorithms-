@@ -1,3 +1,10 @@
+/*Linear search starts at the beginning and goes through all the elements in the list
+until the target element is found
+Runtime
+Time Complexity : O(n)
+Space complexity : O(1)
+*/
+
 //lst is an array of items
 //taget is the value we are looking for 
 function linearSearch(lst, target){
