@@ -1,4 +1,4 @@
-/**
+/*
 Binary search locates the position of an element in a sorted array
 by repeatedly dividing in half the portion of the list that can contain the item, until
 it has narrowed down the position to just one.
@@ -24,9 +24,13 @@ function binarySearch(lst, target){
             last = mid - 1;
         }
     }
+    return null;
 }
 
 let items = [1,2,3,4,5,6,7,8];
-let targetElement = 8;
+let collections = ["Alex Irabor", "Daniel Irabor", "Ehimare Daniel", "Queen", "Victor"];
+let searchString = "Victor";
+let targetElement = 2;
 
 console.log(binarySearch(items, targetElement));
+console.log(binarySearch(collections, searchString));
