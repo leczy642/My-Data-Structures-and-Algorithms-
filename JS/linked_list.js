@@ -43,7 +43,9 @@ function LinkedList(){
     takes O(1) time 
     */
     this.add = function(data){
+        //create the node
         newNode = new Node(data);
+        //insert it into position
         newNode.nextNode = this.head;
         this.head = newNode;    
     }
