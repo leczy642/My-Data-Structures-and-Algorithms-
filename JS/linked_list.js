@@ -46,7 +46,9 @@ function LinkedList(){
         //create the node
         newNode = new Node(data);
         //insert it into position
+        //pointing
         newNode.nextNode = this.head;
+        //reassignment
         this.head = newNode;    
     }
 
