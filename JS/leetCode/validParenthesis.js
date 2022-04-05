@@ -1,3 +1,4 @@
+//https://www.youtube.com/watch?v=9kmUaXrjizQ&t=314s
 var isValid = function(s) {
     let stack = [];
        
