@@ -1,0 +1,41 @@
+//Input: expression = "247+38"
+//Output: "2(47+38)"
+//clue -> 1*(247 + 38)*1
+//https://leetcode.com/problems/minimize-result-by-adding-parentheses-to-expression/submissions/
+//solution: https://leetcode.com/problems/minimize-result-by-adding-parentheses-to-expression/discuss/1935323/Javascript-Simple-solution
+var minimizeResult = function(expression) {
+    //split the expression into right and left from the plus sign.
+   const [left, right] = expression.split("+");
+   
+    //save intitial expression and the first the first temporary sum into an array
+    const result = [`(${expression})`, +left + +right];
+    
+    //create a nested forloop to loop through the left and right elements
+    for(let i = 0; i < left.length; i++){
+         //i1 is left.slice(0,1) if a value is returned or 1 if left.slice(0,i) returns an      emprt string
+                let i1 = left.slice(0, i) || 1;
+                let i2 = left.slice(i)
+                
+        
+        for(let j = 1; j <= right.length; j++){
+               let j1 = right.slice(0, j);
+               let j2 = right.slice(j) || 1;
+            
+        //evaluate i1,i2,j1 and j2 to get a temporary total
+            //javascript can multiply two string values if they are numbers 
+            //but cannot add them, when the plus(+) is between two string numbers
+            //it will concatenate them
+            //the + before the variables converts the values from type string to number
+            let tempTotal = i1 * (+i2 + +j1) * j2;
+            
+            
+            //update the total value to get the smallest
+            if(tempTotal < result[1]){
+                result[0] = `${left.slice(0,i)}(${i2}+${j1})${right.slice(j)}`;
+                result[1] = tempTotal;
+            }
+            
+        }
+    }
+    return result[0];
+};
