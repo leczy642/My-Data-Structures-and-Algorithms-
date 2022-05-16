@@ -5,6 +5,7 @@
 //  --if the element on the left is not equal to that on the right
 //      --return false
 //return true
+//
 var isPalindrome = function(head) {
     let current = head;
     let values = [];
