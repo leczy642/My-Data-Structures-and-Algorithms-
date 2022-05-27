@@ -2,7 +2,7 @@
 //Sumaary
 //if current element in the array is not in the hashmap, push it into it
 //else i.e the element is in (its duplicated) return true
-//after the loop return false.
+//after the loop ends return false.
 var containsDuplicate = function(nums) {
     const map = new Map();
     
